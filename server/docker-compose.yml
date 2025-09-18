@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  nxss-server:
+    build: .
+    container_name: nxss-server
+    ports:
+      - "8080:8080"
+    environment:
+      - NODE_ENV=production
+      - PORT=8080
+      - HOST=0.0.0.0
+      - STORAGE_PROVIDER=local
+      - STORAGE_PATH=/app/storage_data
+    volumes:
+      - ./storage_data:/app/storage_data
+      - ./config:/app/config
+      - ./tmp_uploads:/app/tmp_uploads
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:8080/health', (res) => { process.exit(res.statusCode === 200 ? 0 : 1) })"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Optional: Add a reverse proxy with nginx
+  nginx:
+    image: nginx:alpine
+    container_name: nxss-nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./ssl:/etc/nginx/ssl:ro
+    depends_on:
+      - nxss-server
+    restart: unless-stopped
+    profiles:
+      - nginx

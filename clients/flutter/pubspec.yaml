@@ -1,0 +1,26 @@
+name: nxss_mobile
+description: "NXSS: Cross-Platform File Sync System"
+publish_to: 'none'
+version: 0.1.0+1
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^1.2.2
+  shared_preferences: ^2.2.3
+  flutter_hooks: ^0.20.5
+  file_picker: ^8.0.0
+  path: ^1.9.0
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/logo.svg
+    - assets/logo_icon.svg
+    - assets/logo_large.svg
+
+
+

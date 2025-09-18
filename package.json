@@ -1,0 +1,70 @@
+{
+  "name": "nxss",
+  "version": "0.1.0",
+  "description": "Cross-Platform File Sync System - Self-hostable file synchronization across all your devices",
+  "main": "server/index.js",
+  "scripts": {
+    "setup": "./scripts/setup.sh",
+    "build": "./scripts/build.sh --all",
+    "build:all": "./scripts/build.sh --all",
+    "build:cli": "./scripts/build.sh --cli",
+    "build:flutter": "./scripts/build.sh --flutter",
+    "build:linux": "./scripts/build.sh --linux",
+    "build:windows": "./scripts/build.sh --windows",
+    "build:macos": "./scripts/build.sh --macos",
+    "build:android": "./scripts/build.sh --android",
+    "build:ios": "./scripts/build.sh --ios",
+    "build:server": "./scripts/build.sh --server",
+    "start:server": "cd server && npm start",
+    "dev:server": "cd server && npm run dev",
+    "install:cli": "cd clients/cli && npm install -g .",
+    "test:cli": "cd clients/cli && npm test",
+    "clean": "rm -rf builds/* && cd clients/flutter && flutter clean",
+    "docs": "echo '📚 Documentation available in each component directory'",
+    "help": "echo 'Available commands: setup, build, build:all, build:cli, build:flutter, build:linux, build:windows, build:macos, build:android, build:ios, build:server, start:server, dev:server, install:cli, clean, docs'"
+  },
+  "keywords": [
+    "file-sync",
+    "cross-platform",
+    "self-hosted",
+    "cli",
+    "mobile",
+    "desktop",
+    "flutter",
+    "nodejs",
+    "docker",
+    "privacy",
+    "sync",
+    "files",
+    "backup",
+    "cloud-storage",
+    "google-drive",
+    "open-source"
+  ],
+  "author": {
+    "name": "NXSS Team",
+    "email": "team@nxss.dev",
+    "url": "https://github.com/nxss-team"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/nxss.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/nxss/issues"
+  },
+  "homepage": "https://github.com/your-username/nxss#readme",
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/your-username"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "workspaces": [
+    "server",
+    "clients/cli"
+  ]
+}
