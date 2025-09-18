@@ -377,7 +377,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🗺️ Roadmap
 
-- [X] **Client/Server Pairing ** - Pair client and server with code
+- [X] **Client/Server Pairing** - Pair client and server with code
 - [ ] **Web Interface** - Browser-based management interface
 - [ ] **Mobile Push Notifications** - Real-time sync notifications
 - [ ] **File Versioning** - Keep multiple versions of files
@@ -390,6 +390,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 **Made with ❤️ by the NXSS Team**
+
 
 
 
