@@ -377,18 +377,20 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🗺️ Roadmap
 
+- [X] **Client/Server Pairing ** - Pair client and server with code
 - [ ] **Web Interface** - Browser-based management interface
 - [ ] **Mobile Push Notifications** - Real-time sync notifications
 - [ ] **File Versioning** - Keep multiple versions of files
 - [ ] **Selective Sync** - Choose which files to sync
 - [ ] **Bandwidth Throttling** - Control sync speed
 - [ ] **Conflict Resolution** - Handle file conflicts intelligently
-- [ ] **REST API** - Full REST API for third-party integrations
-- [ ] **WebDAV Support** - WebDAV protocol compatibility
+
+
 
 ---
 
 **Made with ❤️ by the NXSS Team**
+
 
 
 
